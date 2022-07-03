@@ -62,7 +62,7 @@ void setup() {
   static tflite::MicroErrorReporter micro_error_reporter; 
   tflErrorReporter = &micro_error_reporter;
 
-   tflModel = tflite::GetModel(model);
+   tflModel = tflite::GetModel(g_model);
    if (model->version() != TFLITE_SCHEMA_VERSION) {
    error_reporter->Report(
         "Model provided is schema version %d not equal "
